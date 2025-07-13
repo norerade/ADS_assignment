@@ -44,6 +44,18 @@ public class Main {
     }
     // O(n), because it is linear depth of the recursion
 
+    public static void task7(int n, int[] arr) {
+        reverse(arr, n - 1);
+        System.out.println();
+    }
+    private static void reverse(int[] arr, int idx) {
+        if (idx < 0) return;
+        System.out.print(arr[idx] + " ");
+        reverse(arr, idx - 1);
+    }
+    // O(n), because each element is used only one time
+
+
     public static void main(String[] args) {
         // int[] arr1 = {10, 1, 32, 3, 45};
         // System.out.println(task1(arr1, arr1.length));
@@ -59,6 +71,9 @@ public class Main {
         // System.out.println(task5(5));
         // System.out.println(task5(17));
 
-        System.out.println(task6(2, 10));
+        // System.out.println(task6(2, 10));
+
+        int[] arr3 = {1, 4, 6, 2};
+        task7(arr3.length, arr3);
     }
 }
