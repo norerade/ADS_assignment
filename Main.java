@@ -17,12 +17,24 @@ public class Main {
     }
     // O(n), because we have only 1 loop and check an array one time
 
+    public static String task3(int n, int i) {
+        if (n <= 1) return "Composite";
+        if (n == 2) return "Prime";
+        if (n % i == 0) return "Composite";
+        if (i * i > n) return "Prime";
+        return task3(n, i + 1);
+    }
+    // O(sqrt(n)), because we check dividers until sqrt(n)
+
 
     public static void main(String[] args) {
         // int[] arr1 = {10, 1, 32, 3, 45};
         // System.out.println(task1(arr1, arr1.length));
 
-        int[] arr2 = {3, 2, 4, 1};
-        System.out.println(task2(arr2, arr2.length));
+        // int[] arr2 = {3, 2, 4, 1};
+        // System.out.println(task2(arr2, arr2.length));
+
+        System.out.println(task3(7, 2));
+        System.out.println(task3(10, 2));
     }
 }
