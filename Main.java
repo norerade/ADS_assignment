@@ -55,6 +55,14 @@ public class Main {
     }
     // O(n), because each element is used only one time
 
+    public static String task8(String s, int i) {
+        if (i == s.length()) return "Yes";
+        if (!Character.isDigit(s.charAt(i))) return "No";
+        return task8(s, i + 1);
+        // Time: O(n)
+    }
+    // O(n), because we check each character only one time
+
 
     public static void main(String[] args) {
         // int[] arr1 = {10, 1, 32, 3, 45};
@@ -73,7 +81,10 @@ public class Main {
 
         // System.out.println(task6(2, 10));
 
-        int[] arr3 = {1, 4, 6, 2};
-        task7(arr3.length, arr3);
+        // int[] arr3 = {1, 4, 6, 2};
+        // task7(arr3.length, arr3);
+
+        System.out.println(task8("123456", 0));
+        System.out.println(task8("123a12", 0));
     }
 }
