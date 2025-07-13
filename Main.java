@@ -26,6 +26,12 @@ public class Main {
     }
     // O(sqrt(n)), because we check dividers until sqrt(n)
 
+    public static long task4(int n) {
+        if (n <= 1) return 1;
+        return n * task4(n - 1);
+    }
+    // O(n), because it is linear depth of the recursion
+
 
     public static void main(String[] args) {
         // int[] arr1 = {10, 1, 32, 3, 45};
@@ -34,7 +40,9 @@ public class Main {
         // int[] arr2 = {3, 2, 4, 1};
         // System.out.println(task2(arr2, arr2.length));
 
-        System.out.println(task3(7, 2));
-        System.out.println(task3(10, 2));
+        // System.out.println(task3(7, 2));
+        // System.out.println(task3(10, 2));
+
+        System.out.println(task4(5));
     }
 }
