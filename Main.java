@@ -69,6 +69,13 @@ public class Main {
     }
     // O(2^n), because recursion and we call function 2 times for each step
 
+    public static int task10(int a, int b) {
+        if (b == 0) return a;
+        return task10(b, a % b);
+    }
+    // O(log n), because each recursive call reduces the size of the second argument b
+
+
     public static void main(String[] args) {
         // int[] arr1 = {10, 1, 32, 3, 45};
         // System.out.println(task1(arr1, arr1.length));
@@ -92,7 +99,10 @@ public class Main {
         // System.out.println(task8("123456", 0));
         // System.out.println(task8("123a12", 0));
 
-        System.out.println(task9(2, 1));
-        System.out.println(task9(7, 3));
+        // System.out.println(task9(2, 1));
+        // System.out.println(task9(7, 3));
+
+        System.out.println(task10(32, 48));
+        System.out.println(task10(10, 7));
     }
 }
