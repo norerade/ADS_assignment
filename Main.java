@@ -10,7 +10,7 @@ public class Main {
     }
     // O(n), because we have only 1 loop and check an array one time
 
-    public static double average(int[] arr, int n) {
+    public static double task2(int[] arr, int n) {
         int sum = 0;
         for (int i = 0; i < n; i++) sum += arr[i];
         return (double) sum / n;
@@ -23,6 +23,6 @@ public class Main {
         // System.out.println(task1(arr1, arr1.length));
 
         int[] arr2 = {3, 2, 4, 1};
-        System.out.println(average(arr2, arr2.length));
+        System.out.println(task2(arr2, arr2.length));
     }
 }
