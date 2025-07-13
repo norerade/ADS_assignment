@@ -63,6 +63,11 @@ public class Main {
     }
     // O(n), because we check each character only one time
 
+    public static int task9(int n, int k) {
+        if (k == 0 || k == n) return 1;
+        return task9(n - 1, k - 1) + task9(n - 1, k);
+    }
+    // O(2^n), because recursion and we call function 2 times for each step
 
     public static void main(String[] args) {
         // int[] arr1 = {10, 1, 32, 3, 45};
@@ -84,7 +89,10 @@ public class Main {
         // int[] arr3 = {1, 4, 6, 2};
         // task7(arr3.length, arr3);
 
-        System.out.println(task8("123456", 0));
-        System.out.println(task8("123a12", 0));
+        // System.out.println(task8("123456", 0));
+        // System.out.println(task8("123a12", 0));
+
+        System.out.println(task9(2, 1));
+        System.out.println(task9(7, 3));
     }
 }
