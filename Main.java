@@ -38,6 +38,12 @@ public class Main {
     }
     // O(2^n), because Fibonacci is the exponential function. We are calling each function at least 2 times for each step in the sequence
 
+    public static long task6(int a, int n) {
+        if (n == 0) return 1;
+        return a * task6(a, n - 1);
+    }
+    // O(n), because it is linear depth of the recursion
+
     public static void main(String[] args) {
         // int[] arr1 = {10, 1, 32, 3, 45};
         // System.out.println(task1(arr1, arr1.length));
@@ -50,7 +56,9 @@ public class Main {
 
         // System.out.println(task4(5));
 
-        System.out.println(task5(5));
-        System.out.println(task5(17));
+        // System.out.println(task5(5));
+        // System.out.println(task5(17));
+
+        System.out.println(task6(2, 10));
     }
 }
